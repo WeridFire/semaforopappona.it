@@ -884,6 +884,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Funzione per gestire il click sull'email
+function copyEmail(event) {
+    const email = 'filippo.maretti03@gmail.com';
+    
+    // Prova a copiare negli appunti
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(() => {
+            showEmailNotification('Email copiata negli appunti!');
+        }).catch(() => {
+            // Fallback se non funziona
+            showEmailNotification(`Email: ${email}`);
+        });
+        event.preventDefault();
+    } else {
+        // Se clipboard non è disponibile, lascia che il mailto: funzioni
+        showEmailNotification(`Apertura client email...`);
+    }
+}
+
+// Mostra notifica email
+function showEmailNotification(message) {
+    // Rimuovi notifica esistente se presente
+    const existingNotification = document.querySelector('.email-notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+    
+    // Crea nuova notifica
+    const notification = document.createElement('div');
+    notification.className = 'email-notification';
+    notification.textContent = message;
+    notification.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(52, 152, 219, 0.95);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        z-index: 10000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        animation: slideInUp 0.3s ease-out;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Rimuovi dopo 3 secondi
+    setTimeout(() => {
+        notification.style.animation = 'slideOutDown 0.3s ease-in';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.remove();
+            }
+        }, 300);
+    }, 3000);
+}
+
 // Debug: funzione per testare il calcolo degli stati
 window.debugSemaforo = function() {
     const ora = new Date();
