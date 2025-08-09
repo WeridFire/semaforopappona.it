@@ -6,7 +6,7 @@
   "homepage": "https://filippomaretti.github.io/semaforopappona",
   "repository": {
     "type": "git",
-    "url": "https://github.com/filippomaretti/semaforopappona.git"
+    "url": "https://github.com/WeridFire/semaforopappona.it"
   },
   "keywords": [
     "semaforo",
@@ -16,7 +16,7 @@
     "navigation",
     "web-app"
   ],
-  "author": "Filippo Maretti <filippo.maretti@example.com>",
+  "author": "Filippo Maretti <filippo.maretti03@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "npx live-server --port=3000 --open=/index.html",
