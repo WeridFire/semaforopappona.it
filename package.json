@@ -1,0 +1,29 @@
+{
+  "name": "semaforopappona",
+  "version": "1.0.0",
+  "description": "Semaforo sincronizzato con orario assoluto per Modigliana e Faenza",
+  "main": "index.html",
+  "homepage": "https://filippomaretti.github.io/semaforopappona",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/filippomaretti/semaforopappona.git"
+  },
+  "keywords": [
+    "semaforo",
+    "traffic-light",
+    "modigliana",
+    "faenza",
+    "navigation",
+    "web-app"
+  ],
+  "author": "Filippo Maretti <filippo.maretti@example.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --open=/index.html",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "echo 'Deploy to GitHub Pages via Actions'"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

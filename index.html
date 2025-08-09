@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semaforo Pappona</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>🚦 Semaforo Pappona </h1>
+            
+            <!-- Switch Semafori -->
+            <div class="semaforo-switch">
+                <button class="switch-btn active" data-semaforo="modigliana">
+                    🟦 Verso Modigliana
+                </button>
+                <button class="switch-btn" data-semaforo="faenza">
+                    🟩 Verso Faenza
+                </button>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <!-- Sezione Semaforo -->
+            <div class="semaforo-section">
+                <div class="card">
+                    <h3 class="section-title">🚦 Stato Semaforo</h3>
+                    
+                    <div class="semaforo">
+                        <div class="luce rosso" id="rosso">
+                            <span class="numero" id="numero-rosso"></span>
+                        </div>
+                        <div class="luce giallo" id="giallo">
+                            <span class="numero" id="numero-giallo"></span>
+                        </div>
+                        <div class="luce verde" id="verde">
+                            <span class="numero" id="numero-verde"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="info">
+                        <div class="status-item">
+                            <span class="label">Stato attuale</span>
+                            <span class="value" id="stato-attuale">Caricamento...</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="label">Tempo rimanente</span>
+                            <span class="value" id="tempo-rimanente">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sezione Mappa -->
+            <div class="mappa-section">
+                <div class="card">
+                    <div class="navigation-header">
+                        <h3 class="section-title">📍 Navigazione al Semaforo</h3>
+                        <div class="arrival-prediction">
+                            <span class="arrival-label">All'arrivo:</span>
+                            <span class="arrival-status" id="stato-arrivo">In attesa...</span>
+                        </div>
+                    </div>
+                    
+                    <div id="map" class="map-container"></div>
+                    
+                    <div class="percorso-info">
+                        <div class="percorso-item">
+                            <span class="label">⏱️ Tempo</span>
+                            <span class="value" id="tempo-percorso">Clicca "Aggiorna Posizione" ⬇️</span>
+                        </div>
+                        <div class="percorso-item">
+                            <span class="label">📏 Distanza</span>
+                            <span class="value" id="distanza">--</span>
+                        </div>
+                    </div>
+                    
+                    <button id="aggiorna-posizione" class="btn-aggiorna">
+                        🔄 Aggiorna Posizione
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-author">
+                    A cura di <strong>Filippo Maretti</strong>
+                </p>
+                <div class="footer-links">
+                    <a href="https://github.com/filippomaretti/semaforopappona" target="_blank" class="footer-link">
+                        📂 Progetto Open Source
+                    </a>
+                    <a href="mailto:filippo.maretti03@gmail.com" class="footer-link">
+                        ✉️ Contattami
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
