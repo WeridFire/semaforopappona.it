@@ -6,7 +6,7 @@ const INTERVALLI = {
 };
 
 // ORARIO DI RIFERIMENTO: 8/08/2025 17:49:46 (inizio dei 3 secondi di giallo)
-const RIFERIMENTO_BASE = new Date('2025-08-08T17:49:46.000Z');
+const RIFERIMENTO_BASE = new Date('2025-08-08T17:50:38.000Z');
 
 // CONFIGURAZIONE SEMAFORI
 const SEMAFORI = {
