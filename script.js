@@ -1,6 +1,6 @@
 // CONFIGURAZIONE INTERVALLI (modificabili)
 const INTERVALLI = {
-    ROSSO: 90,    // secondi
+    ROSSO: 97,    // secondi
     VERDE: 30,    // secondi  
     GIALLO: 3     // secondi
 };
