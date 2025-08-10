@@ -28,7 +28,7 @@ const SEMAFORI = {
             lat: 44.171031713746146,
             lng: 11.809469937437775
         },
-        riferimento: new Date(RIFERIMENTO_BASE.getTime() + 60000), // +60 secondi
+        riferimento: new Date(RIFERIMENTO_BASE.getTime() + 65000), // +65 secondi
         icon: '🟩',
         color: '#10b981'
     }
