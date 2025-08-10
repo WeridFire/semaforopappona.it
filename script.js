@@ -6,7 +6,7 @@ const INTERVALLI = {
 };
 
 // ORARIO DI RIFERIMENTO: 8/08/2025 17:49:46 (inizio dei 3 secondi di giallo)
-const RIFERIMENTO_BASE = new Date('2025-08-08T17:50:12.000Z');
+const RIFERIMENTO_BASE = new Date('2025-08-08T17:50:38.000Z');
 
 // CONFIGURAZIONE SEMAFORI
 const SEMAFORI = {
@@ -28,7 +28,7 @@ const SEMAFORI = {
             lat: 44.171031713746146,
             lng: 11.809469937437775
         },
-        riferimento: new Date(RIFERIMENTO_BASE.getTime() + 65000), // +65 secondi
+        riferimento: new Date(RIFERIMENTO_BASE.getTime() + 39000), // +39 secondi
         icon: '🟩',
         color: '#10b981'
     }
